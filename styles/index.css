@@ -1,0 +1,38 @@
+.container{
+    max-width: 1100px;
+    box-sizing: border-box;
+}
+
+
+body.light-mode{
+    background: #fff;
+}
+
+body.light-mode h1,
+body.light-mode button
+body.dark-mode .buttons{
+    color: #000;
+}
+
+body.dark-mode{
+    background: #000;
+}
+
+body.dark-mode h1,
+body.dark-mode button,
+body.dark-mode .buttons{
+    color: white;
+}
+
+
+.con-btn{
+    display: flex;
+    justify-content: end;
+}
+
+.btn{
+    background-color: blue;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px
+}

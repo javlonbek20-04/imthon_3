@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imthon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body id="body" class="dark-mode">
+  <div class="accordion  container" id="accordionExample">
+    <h1>NT-79 3-Oy imtihoni</h1>
+    <div class="con-btn">
+      <button class="btn" onclick="toggleDarkLightMode()">Mavzuni o'zgartirish</button>
+    </div>
+
+    <!-- ONE  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button buttons" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Topshiriq #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <label for="text">Lavozimni kiriting:</label>
+          <input type="text" id="input_lavozim">
+          <button id="btn_la">Tasdiqlash</button>
+          <p id="plavozim"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TWO  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Topshiriq #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <input type="date" id="day">
+          <input type="date" id="day_two">
+          <button onclick="calculateDays()">Farqini topish</button>
+          <p id="output"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- THREE  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Topshiriq #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <form>
+            <label for="fname">99gacha son kiriting:</label>
+            <input type="text" class="number">
+            <input type="button" value="Tastiqlang" onclick="numberFunc()">
+            <h4 id="resultuchinchi"></h4>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOUR  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Topshiriq #4
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div>
+            Berilgan <code>[3, 5, 22, 5, 7, 2, 45, 75]</code> massivning elementlari yig'indisini har
+            bir elementini 3 qo'shilgan holatda hisoblang va ekranga chiqaring.
+            <br>
+            <p>Natija: <code id="qiymat"></code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIVE  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Topshiriq #5
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div> Berilgan <code> [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];</code> va
+            <code>[4, 2, 21, 12, 13, 34, 46, 79, 10, 21, 34];</code> massivlarning mos
+            elementlari yig'indisini hisoblaydigan funksiya yozing.
+          </div>
+          <p>Natija: <code id="solve--array"></code></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIX  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+          aria-expanded="false" aria-controls="collapseSix">
+          Topshiriq #6
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <h5>Istalgan soni kiriting:</h5>
+          <input id="enti" style="text-transform: uppercase" type="text" autocomplete="off" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SEVEN  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Topshiriq #7
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <form class="form_ism">
+            <label for="name--enter">Ism: </label>
+            <input required maxlength="32" minlength="3" id="firs-name" type="text">
+            <label class="mt-3" for="Age">Yosh:</label>
+            <input required max="150" min="0" type="number">
+            <button type="submit">Tasdiqlash</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- EIGHT  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          Topshiriq #8
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <span id="mass" class=" text-danger"></span>massividan inputga kiritilganini
+          o'chirib ,qolganini
+          ekranga chiqaradigan funksiya yozing.
+          <form action="">
+            <input type="number" id="massive_status">
+            <button id="rebok">o'chirish</button>
+            <p id="alpha_massive"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- NINE  -->
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+          Topshiriq #9
+        </button>
+      </h2>
+      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Inputga kiritilgan so'zlarni ketma-ket chiqaradigan funskiya
+          <input type="text" id="names">
+          <p id="all"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
